@@ -1,0 +1,9 @@
+<ion-view title="high scores">
+  <ion-content>
+    <h2 class="text-center game-text">High Scores</h2>
+    <ion-item collection-repeat="highscore in highscores">
+      {{highscore.name}}
+      {{highscore.score}}
+    </ion-item>
+  </ion-content>
+</ion-view>

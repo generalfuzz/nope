@@ -1,0 +1,34 @@
+<ion-pane>
+  <audio id="game-audio">
+    <source id="game-audio-source" type="audio/mpeg" src="{{ whisperAudio }}">
+  </audio>
+
+  <ion-content>
+    <div class="avatar-header">
+      <img class="avatar" ng-src="{{ avatarImg }}"/>
+      <span class="{{currentLevel}} level-name avatar-level-name">{{ levelName }}</span>
+      <span class="{{currentLevel}} score">score: {{totalPoints}}</span>
+    </div>
+
+    <div class="progressBarSize">
+      <uib-progressbar level="currentLevelPBar" max="progressBarMax" value="progressBarValue"></uib-progressbar>
+    </div>
+
+    <div class="center">
+      <h2>Direction: <span class="direction">{{ trainDirection }}</span></h2>
+      <img class="embedMap" ng-src="{{ mapImg }}">
+
+      <h2>Round points: <span class="roundPoints">{{ roundPoints }}</span></h2>
+    </div>
+    <br/>
+
+    <div class="row center" ng-controller="TrainPickController">
+      <div class="col" ng-repeat="(key, value) in trains">
+        <a ng-click="choose('{{ key }}')"><img class="muni-icon"
+                                               ng-class="{ be_gray: value['selected'], hover_grayscale : !value['selected']}"
+                                               ng-src="{{ value['img'] }}"/> </a>
+      </div>
+    </div>
+  </ion-content>
+</ion-pane>
+

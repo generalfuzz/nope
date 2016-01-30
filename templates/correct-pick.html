@@ -1,0 +1,25 @@
+<ion-view title="Correct" >
+  <span id="audioParent"></span>
+
+
+  <ion-content scroll="false">
+    <div class="avatar-header">
+      <img class="avatar" ng-src="{{ avatarImg }}"/>
+      <span class="{{currentLevel}} level-name avatar-level-name">{{ levelName }}</span>
+      <span class="{{currentLevel}} score">score: {{totalPoints}}</span>
+    </div>
+    <div class="progressBarSize" ><uib-progressbar level="currentLevelPBar" max="progressBarMax" value="progressBarValue" ></uib-progressbar></div>
+    <video class="reward-vid" preload="auto" muted="muted" loop="loop"  webkit-playsinline="">
+      <source ng-src="{{correctVideo}}" type="video/webm">
+    </video>
+    <span ng-show="updatedPoints">
+    <button class="button button-block button-positive" ng-click="nextStationPlease()">
+      {{ buttonText }}
+    </button>
+    <button class="button button-block button-light" ng-click="finishPlaying()">
+      All Done!
+    </button>
+    </span>
+
+  </ion-content>
+</ion-view>

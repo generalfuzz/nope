@@ -1,0 +1,15 @@
+<ion-view title="Level! overflow-scroll=" true">
+<div class="front-container">
+  <h2 class="text-center game-text">You are a <span class="{{currentLevel}}">{{ levelName }}</span></h2>
+
+  <div class="button-container">
+
+    <button class="button button-block button-positive" ng-click="go('/map')">
+      Go Forth!
+    </button>
+  </div>
+</div>
+
+<img class="level-img" ng-src="{{ levelImg }}">
+
+</ion-view>

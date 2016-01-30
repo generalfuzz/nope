@@ -1,0 +1,22 @@
+<audio id="theme-song">
+  <source src="mp3/choose_the_muni.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<ion-view title="Doodles">
+
+  <ion-content scroll="false">
+  <div class="front-container">
+    <!--<h1 class="text-center game-title">Nope!</h1>-->
+    <img class="nope-img" src="img/nope-large.png"/>
+    <h2 class="text-center game-text">Muni arrival guessing game.</h2>
+
+    <div class="button-container">
+      <button class="button button-block button-positive" ng-click="go('/level')">
+        Play
+      </button>
+    </div>
+  </div>
+  <img class="background-img" ng-src="{{ muniImg }}"/>
+  </ion-content>
+</ion-view>
